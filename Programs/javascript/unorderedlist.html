@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Demo</title>
+    </head>
+    <body>
+        <ul>
+            <li><p id="1">Welcome To india</p></li>
+            <li><p id="2">Welcome To china</p></li>
+            <li><p id="3">Welcome To russia</p></li>
+        </ul>
+    </body>
+</html>
+
+<script type="text/javascript">
+    var temp = document.getElementById("1").innerHTML;
+    document.getElementById("1").innerHTML = document.getElementById("2").innerHTML;
+    document.getElementById("2").innerHTML = temp;
+</script>

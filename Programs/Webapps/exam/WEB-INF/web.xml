@@ -1,0 +1,21 @@
+<web-app>
+    <servlet>
+        <servlet-name>Questions</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Questions</servlet-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Results</servlet-name>
+        <jsp-file>/results.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Results</servlet-name>
+        <url-pattern>/results.jsp</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>/index.jsp</welcome-file-list>
+</web-app>

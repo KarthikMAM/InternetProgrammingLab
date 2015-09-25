@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form | Form Servlet Communication</title>
+    </head>
+    <body>
+        <form name="pForm" action="FormServlet" method="get" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table>
+                    <tr>
+                        <td>Name
+                        <td><input type="text" name="pName" title="Enter your name">
+                    </tr>
+                    <tr>
+                        <td>Title
+                        <td><input type="text" name="pTitle" title="Enter your title">
+                    </tr>
+                    <tr>
+                        <td>Job
+                        <td><input type="text" name="pJob" title="Enter your job">
+                    </tr>
+                    <tr>
+                        <td>Contact
+                        <td><input type="tel" name="pContact" title="Enter your contact's phone number">
+                    </tr>
+                    <tr>
+                        <td>Birthday
+                        <td><input type="date" name="pBday" title="Enter your date of birth">
+                    </tr>
+                    <tr>
+                        <td>ID
+                        <td><input type="number" name="pID" title="Enter your Person ID">
+                    </tr>
+                    <tr>
+                        <td>Mobile
+                        <td><input type="tel" name="pMobile" title="Enter your mobile number">
+                    </tr>
+                    <tr>
+                        <td>Email
+                        <td><input type="email" name="pEmail" title="Enter your e-mail id">
+                    </tr>
+                    <tr>
+                        <td>Married
+                        <td>
+                            <input type="radio" name="pMarried" value="Married" title="If your are married">Married</input><br>
+                            <input type="radio" name="pMarried" value="Single"  title="If otherwise">Single</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="submit" value="submit"/>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
+<script type="text/javascript">
+    function validateForm() {
+        var form = document.forms["pForm"];
+
+        var mobilePattern = new RegExp("[0-9]{10}");
+        var emailPattern = new RegExp("[a-zA-Z0-9_]+[@][a-zA-Z0-9_]+[.][a-zA-Z]+");
+
+        for(var i=1; i<form.length - 1; i++) {
+            if (form[i].value == "") {
+                window.alert("ALL FIELDS ARE MANDATORY");
+                return false;
+            }
+
+            switch (form[i].type) {
+                case "text": {
+
+                    break;
+                }
+                case "tel": {
+                    if (mobilePattern.test(form[i].value) == false) {
+                        window.alert("INVALID PHONE NUMBER : " + form[i].value);
+                        return false;
+                    }
+                    break;
+                }
+                case "email": {
+                    if (emailPattern.test(form[i].value) == false) {
+                        window.alert("INVALID MAIL : " + form[i].value);
+                        return false;
+                    }
+                    break;
+                }
+                case "radio": {
+                    var selected = false;
+                    for(var j=0; j<form.length; j++) {
+                        if(form[j].name == form[i].name && form[j].checked) {
+                            selected = true;
+                        }
+                    }
+                    if (!selected) {
+                        window.alert("SELECT THE OPTIONS : " + form[i].name);
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+</script>

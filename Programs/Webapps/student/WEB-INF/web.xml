@@ -1,0 +1,11 @@
+<web-app>
+    <servlet>
+        <servlet-name>StudentSystem</servlet-name>
+        <servlet-class>StudentSystem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentSystem</servlet-name>
+        <url-pattern>/StudentSystem</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>/index.html</welcome-file-list>
+</web-app>

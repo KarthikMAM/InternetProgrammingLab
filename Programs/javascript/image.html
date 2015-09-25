@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello world</title>
+        <style>
+            * {
+                transition: all ease 500ms;
+            }
+
+            #pic:hover {
+                box-shadow: 0px 0px 50px #ef2;
+                display: inline;
+            }
+
+            #pic {
+                box-shadow: 0px 0px 100px #1cf;
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="picd">
+            <img title="images" id="pic" src="1.JPG" height="300" onmouseover="changePic()" onmouseout="changePicOut()"/>
+        </div>
+    </body>
+</head>
+
+<script type="text/javascript">
+    function changePic() {
+        var image = document.getElementById("pic");
+        image.src = "2.JPG";
+    }
+
+    function changePicOut() {
+        var image = document.getElementById("pic");
+        image.src = "1.JPG";
+    }
+</script>

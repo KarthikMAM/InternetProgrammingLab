@@ -1,3 +1,9 @@
+<h4>Java Installation</h4>
+<ul>
+  <li>Open the terminal and type the command <pre> sudo apt-get install default-jdk </pre>
+</ul>
+
+
 <h4>Applet Procedure</h4>
 <ul>
   <li>Create the java file aas shown above

@@ -65,3 +65,13 @@ or simply
 </web-app>
 
 ```
+
+<h4>Index of apps</h4>
+<ul>
+  <li><a href="appletservlet">Applet to Servlet Communication</a>
+  <li><a href="exam">Online Exam</a>
+  <li><a href="form">Form Servlet Communication</a>
+  <li><a href="login">Login Authentication Using JSP Sessions</a>
+  <li><a href="sessions">Session Visit Counter using JSP</a>
+  <li><a href="student">Student Database Manipulation</a>
+</ul>

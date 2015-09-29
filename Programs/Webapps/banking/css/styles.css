@@ -1,0 +1,15 @@
+* {
+    font-family: fantasy;
+    transition: 300ms all ease;
+}
+
+input:hover {
+    box-shadow: 0px 0px 25px #2fc;
+}
+
+td {
+    border-top: 1pt solid black;
+    border-bottom: 1pt solid black;
+    border-left: 2pt solid black;
+    border-right: 2pt solid black;
+}
